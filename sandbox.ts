@@ -1,44 +1,23 @@
-//explicit types
+// Dynamic Types
 
-// : inte =  så som andra programmerings språk
-let character: string
-let age: number
-let isLoggedIn: boolean
+//Man tror att age är satta för endast Integer, men det stämmer inte, du kan lägga vad som helst dataType
+let age: any = 25
+age = true
+age = 'hello'
+age = {names: 'oshi'}
 
-age = 30
+let mixed: any[] = []
 
-let ninjas: string[] = []
-/*Du kan få error om du pushar upp ninjas array för att du har inte initilize, så som JAVA,
-* Du måste säga att ninjas är i tom array och sedan kan du anropa push. */
+mixed.push(5)
+mixed.push('mario')
+mixed.push(true)
+console.log(mixed)
 
-/*let ninjas: string[] = []
-ninjas.push('hello')
-console.log(ninjas)*/
-
-//union types , om man vill lägga in mixad datatype
-let mixed : (string|number)[] = []
-
-//du kan ocskså skapa variabel i union
-let uid : string | number
-
-
-// objects
-
-let ninjaOne : object
-ninjaOne = {
-    names: 'osh',
-    age: 23
+//objects
+let ninja : {names: (string|boolean), age: any } // testade lägga i union :)
+ninja = {
+    names: true,
+    age: '23'
 }
 
-//samma regler, du får inte lägga in en ny variabel om du har skapat tidigare object
-let ninjaTwo : {
-    names: string,
-    age: number,
-    beltColour: string
-}
-
-ninjaTwo = {
-    names : 'osh',
-    age : 20,
-    beltColour : 'red'
-}
+console.log(ninja)

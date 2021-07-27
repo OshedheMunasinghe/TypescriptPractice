@@ -1,29 +1,18 @@
-//explicit types
-// : inte =  så som andra programmerings språk
-var character;
-var age;
-var isLoggedIn;
-age = 30;
-var ninjas = [];
-/*Du kan få error om du pushar upp ninjas array för att du har inte initilize, så som JAVA,
-* Du måste säga att ninjas är i tom array och sedan kan du anropa push. */
-/*let ninjas: string[] = []
-ninjas.push('hello')
-console.log(ninjas)*/
-//union types , om man vill lägga in mixad datatype
+// Dynamic Types
+//Man tror att age är satta för endast Integer, men det stämmer inte, du kan lägga vad som helst dataType
+var age = 25;
+age = true;
+age = 'hello';
+age = { names: 'oshi' };
 var mixed = [];
-//du kan ocskså skapa variabel i union
-var uid;
-// objects
-var ninjaOne;
-ninjaOne = {
-    names: 'osh',
-    age: 23
+mixed.push(5);
+mixed.push('mario');
+mixed.push(true);
+console.log(mixed);
+//objects
+var ninja; // testade lägga i union :)
+ninja = {
+    names: true,
+    age: '23'
 };
-//samma regler, du får inte lägga in en ny variabel om du har skapat tidigare object
-var ninjaTwo;
-ninjaTwo = {
-    names: 'osh',
-    age: 20,
-    beltColour: 'red'
-};
+console.log(ninja);
