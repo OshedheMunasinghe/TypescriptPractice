@@ -21,3 +21,5 @@ ninja = {
 }
 
 console.log(ninja)
+
+//I just fixed tsconfig

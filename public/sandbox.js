@@ -1,3 +1,4 @@
+"use strict";
 // Dynamic Types
 //Man tror att age är satta för endast Integer, men det stämmer inte, du kan lägga vad som helst dataType
 var age = 25;
@@ -16,3 +17,4 @@ ninja = {
     age: '23'
 };
 console.log(ninja);
+//I just fixed tsconfig
