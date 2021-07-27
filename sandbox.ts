@@ -1,10 +1,13 @@
-const character = 'lui'
-console.log(character)
+//strings, number, strings
+let character = 'mario'
+let age = 30
+let isBlackBelt = false
 
-const input = document.querySelectorAll('input')
+character = 'lui'
 
-console.log(input)
+//påminner ungefär som swift, där man markerar tydligt vilken datatype man ska ha.
+const circ = (diameter:number) =>{
+    return diameter * Math.PI
+}
 
-input.forEach(input => {
-    console.log(input)
-})
+console.log(circ(40))
