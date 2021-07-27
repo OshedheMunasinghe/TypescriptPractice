@@ -1,10 +1,22 @@
-const character = 'lui'
-console.log(character)
+// learning about objects & array
 
-const input = document.querySelectorAll('input')
+let numbers = [10,20]
+//Du kan inte lägga in annan datatype för att den är bestämd Integer
 
-console.log(input)
+//Du kan lägga array med olika datatypes
+let mix = ['hello' , 20, false ]
+//du kan inte lägga en ny variabel i array
 
-input.forEach(input => {
-    console.log(input)
-})
+//OBJECTS
+
+//Du kan inte lägga in en ny variabel om du har skapat innan ...
+let ninja = {
+    names: 'os',
+    age: 12
+}
+
+//otillåtet ninja.skills = 'fire'
+
+//om du vill uppdateera måste names och age variablar vara med!
+
+//Därför är TS väldigt strängt för att minimera buggfel.
