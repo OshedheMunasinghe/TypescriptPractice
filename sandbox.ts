@@ -1,22 +1,44 @@
-// learning about objects & array
+//explicit types
 
-let numbers = [10,20]
-//Du kan inte lägga in annan datatype för att den är bestämd Integer
+// : inte =  så som andra programmerings språk
+let character: string
+let age: number
+let isLoggedIn: boolean
 
-//Du kan lägga array med olika datatypes
-let mix = ['hello' , 20, false ]
-//du kan inte lägga en ny variabel i array
+age = 30
 
-//OBJECTS
+let ninjas: string[] = []
+/*Du kan få error om du pushar upp ninjas array för att du har inte initilize, så som JAVA,
+* Du måste säga att ninjas är i tom array och sedan kan du anropa push. */
 
-//Du kan inte lägga in en ny variabel om du har skapat innan ...
-let ninja = {
-    names: 'os',
-    age: 12
+/*let ninjas: string[] = []
+ninjas.push('hello')
+console.log(ninjas)*/
+
+//union types , om man vill lägga in mixad datatype
+let mixed : (string|number)[] = []
+
+//du kan ocskså skapa variabel i union
+let uid : string | number
+
+
+// objects
+
+let ninjaOne : object
+ninjaOne = {
+    names: 'osh',
+    age: 23
 }
 
-//otillåtet ninja.skills = 'fire'
+//samma regler, du får inte lägga in en ny variabel om du har skapat tidigare object
+let ninjaTwo : {
+    names: string,
+    age: number,
+    beltColour: string
+}
 
-//om du vill uppdateera måste names och age variablar vara med!
-
-//Därför är TS väldigt strängt för att minimera buggfel.
+ninjaTwo = {
+    names : 'osh',
+    age : 20,
+    beltColour : 'red'
+}
